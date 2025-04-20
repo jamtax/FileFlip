@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="400" fill="white" />
+  
+  <!-- Background Pattern - Light grid similar to accounting paper -->
+  <g opacity="0.05">
+    <path d="M0,20 H1200 M0,40 H1200 M0,60 H1200 M0,80 H1200 M0,100 H1200 M0,120 H1200 M0,140 H1200 M0,160 H1200 M0,180 H1200 M0,200 H1200 M0,220 H1200 M0,240 H1200 M0,260 H1200 M0,280 H1200 M0,300 H1200 M0,320 H1200 M0,340 H1200 M0,360 H1200 M0,380 H1200" stroke="black" stroke-width="0.5" />
+    <path d="M20,0 V400 M40,0 V400 M60,0 V400 M80,0 V400 M100,0 V400 M120,0 V400 M140,0 V400 M160,0 V400 M180,0 V400 M200,0 V400 M220,0 V400 M240,0 V400 M260,0 V400 M280,0 V400 M300,0 V400 M320,0 V400 M340,0 V400 M360,0 V400 M380,0 V400 M400,0 V400 M420,0 V400 M440,0 V400 M460,0 V400 M480,0 V400 M500,0 V400 M520,0 V400 M540,0 V400 M560,0 V400 M580,0 V400 M600,0 V400 M620,0 V400 M640,0 V400 M660,0 V400 M680,0 V400 M700,0 V400 M720,0 V400 M740,0 V400 M760,0 V400 M780,0 V400 M800,0 V400 M820,0 V400 M840,0 V400 M860,0 V400 M880,0 V400 M900,0 V400 M920,0 V400 M940,0 V400 M960,0 V400 M980,0 V400 M1000,0 V400 M1020,0 V400 M1040,0 V400 M1060,0 V400 M1080,0 V400 M1100,0 V400 M1120,0 V400 M1140,0 V400 M1160,0 V400 M1180,0 V400" stroke="black" stroke-width="0.5" />
+  </g>
+  
+  <!-- Left Side - Jamtax Logo Area -->
+  <g transform="translate(120, 140)">
+    <!-- Jamtax Logo - Squared Shape with Arrows -->
+    <rect x="0" y="0" width="120" height="120" rx="24" ry="24" fill="white" stroke="black" stroke-width="6" />
+    
+    <!-- Arrow Symbol -->
+    <rect x="58" y="10" width="8" height="100" fill="black" /> <!-- Vertical line -->
+    <rect x="28" y="56" width="68" height="8" fill="black" /> <!-- Horizontal line -->
+    
+    <!-- Top arrow pointing right -->
+    <path d="M66,10 L88,32 L66,32 Z" fill="black" />
+    
+    <!-- Bottom arrow pointing left -->
+    <path d="M58,110 L36,88 L58,88 Z" fill="black" />
+    
+    <!-- Document Squares -->
+    <rect x="28" y="30" width="16" height="16" fill="white" />
+    <rect x="80" y="70" width="16" height="16" fill="white" />
+  </g>
+  
+  <!-- Right Side - Main Content Area -->
+  <g transform="translate(300, 100)">
+    <!-- FileFlip Text -->
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="black">FileFlip</text>
+    
+    <!-- Tagline -->
+    <text x="5" y="100" font-family="Arial, sans-serif" font-size="24" fill="#444">PDF to CSV Conversion Tool</text>
+    
+    <!-- Feature List -->
+    <g transform="translate(5, 140)">
+      <!-- Bullet Points -->
+      <circle cx="8" cy="8" r="4" fill="#e74c3c" />
+      <text x="25" y="13" font-family="Arial, sans-serif" font-size="18" fill="#333">Convert PDF documents to CSV format</text>
+      
+      <circle cx="8" cy="38" r="4" fill="#e74c3c" />
+      <text x="25" y="43" font-family="Arial, sans-serif" font-size="18" fill="#333">Export to Excel-compatible worksheets</text>
+      
+      <circle cx="8" cy="68" r="4" fill="#e74c3c" />
+      <text x="25" y="73" font-family="Arial, sans-serif" font-size="18" fill="#333">Upload directly to Sage accounting</text>
+      
+      <circle cx="8" cy="98" r="4" fill="#e74c3c" />
+      <text x="25" y="103" font-family="Arial, sans-serif" font-size="18" fill="#333">Fast, accurate and secure conversion</text>
+    </g>
+  </g>
+  
+  <!-- Document Illustrations -->
+  <g transform="translate(880, 110)">
+    <!-- PDF Document -->
+    <g>
+      <rect x="0" y="0" width="70" height="90" rx="4" fill="white" stroke="#aaa" stroke-width="1" />
+      <rect x="0" y="0" width="70" height="20" rx="4" fill="#e74c3c" />
+      <path d="M0,20 H70" stroke="#aaa" stroke-width="1" />
+      <text x="35" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">PDF</text>
+      
+      <!-- Document Lines -->
+      <line x1="10" y1="35" x2="60" y2="35" stroke="#333" stroke-width="1" />
+      <line x1="10" y1="45" x2="60" y2="45" stroke="#333" stroke-width="1" />
+      <line x1="10" y1="55" x2="60" y2="55" stroke="#333" stroke-width="1" />
+      <line x1="10" y1="65" x2="40" y2="65" stroke="#333" stroke-width="1" />
+    </g>
+    
+    <!-- Arrow -->
+    <g transform="translate(85, 40)">
+      <path d="M0,5 H30" stroke="black" stroke-width="3" />
+      <polygon points="25,0 40,5 25,10" fill="black" />
+    </g>
+    
+    <!-- CSV Document -->
+    <g transform="translate(140, 0)">
+      <rect x="0" y="0" width="70" height="90" rx="4" fill="white" stroke="#aaa" stroke-width="1" />
+      <rect x="0" y="0" width="70" height="20" rx="4" fill="#2980b9" />
+      <path d="M0,20 H70" stroke="#aaa" stroke-width="1" />
+      <text x="35" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">CSV</text>
+      
+      <!-- Spreadsheet Grid -->
+      <line x1="0" y1="35" x2="70" y2="35" stroke="#aaa" stroke-width="1" />
+      <line x1="0" y1="50" x2="70" y2="50" stroke="#aaa" stroke-width="1" />
+      <line x1="0" y1="65" x2="70" y2="65" stroke="#aaa" stroke-width="1" />
+      <line x1="0" y1="80" x2="70" y2="80" stroke="#aaa" stroke-width="1" />
+      
+      <line x1="23" y1="20" x2="23" y2="90" stroke="#aaa" stroke-width="1" />
+      <line x1="46" y1="20" x2="46" y2="90" stroke="#aaa" stroke-width="1" />
+    </g>
+  </g>
+  
+  <!-- Jam Tax Branding -->
+  <g transform="translate(20, 360)">
+    <text font-family="Arial, sans-serif" font-size="14" fill="#333">A service by JamTax Accounting</text>
+  </g>
+  
+  <!-- fileflip.jamtax.co.za URL -->
+  <g transform="translate(1010, 360)">
+    <text font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="end">fileflip.jamtax.co.za</text>
+  </g>
+</svg>

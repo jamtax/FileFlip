@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with Gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#20a56b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#147a4e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle with Subtle Shadow -->
+  <circle cx="32" cy="32" r="31" fill="url(#bg-gradient)" />
+  <circle cx="32" cy="32" r="29" fill="url(#bg-gradient)" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.3" />
+  
+  <!-- PDF Document with Shadow and Fold -->
+  <g transform="translate(-4, 0)">
+    <!-- Document shadow -->
+    <rect x="16.5" y="17.5" width="13" height="19" rx="2" fill="#00000020" />
+    
+    <!-- Main document -->
+    <rect x="15" y="16" width="13" height="19" rx="2" fill="#ffffff" />
+    
+    <!-- Document fold -->
+    <path d="M24,16 L28,20 L24,20 Z" fill="#f0f0f0" />
+    <path d="M24,16 L28,20 L24,20 Z" fill="none" stroke="#d9d9d9" stroke-width="0.5" />
+    
+    <!-- Red header -->
+    <rect x="17" y="19" width="9" height="2.5" rx="1" fill="#e74c3c" />
+    
+    <!-- Document lines -->
+    <rect x="17" y="23" width="9" height="1" rx="0.5" fill="#555" />
+    <rect x="17" y="25.5" width="9" height="1" rx="0.5" fill="#555" />
+    <rect x="17" y="28" width="6" height="1" rx="0.5" fill="#555" />
+    
+    <!-- PDF text -->
+    <text x="21.5" y="33" font-family="Arial, sans-serif" font-size="3.8" font-weight="bold" fill="#e74c3c" text-anchor="middle">PDF</text>
+  </g>
+  
+  <!-- Improved Conversion Graphic - Circular Arrows -->
+  <g>
+    <!-- Circular arrow with gradient -->
+    <defs>
+      <linearGradient id="arrow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    
+    <!-- Central circular conversion icon -->
+    <circle cx="32" cy="32" r="5" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="0.5" />
+    
+    <!-- Circular arrows -->
+    <path d="M32,27 A5,5 0 0,1 37,32" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round" />
+    <path d="M32,37 A5,5 0 0,1 27,32" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round" />
+    
+    <!-- Arrow heads -->
+    <polygon points="37,32 39,30 39,34" fill="#ffffff" />
+    <polygon points="27,32 25,30 25,34" fill="#ffffff" />
+  </g>
+  
+  <!-- CSV Document with Enhanced Details -->
+  <g transform="translate(4, 0)">
+    <!-- Document shadow -->
+    <rect x="35.5" y="17.5" width="13" height="19" rx="2" fill="#00000020" />
+    
+    <!-- Main document -->
+    <rect x="34" y="16" width="13" height="19" rx="2" fill="#ffffff" />
+    
+    <!-- Blue header -->
+    <rect x="36" y="19" width="9" height="2.5" rx="1" fill="#2980b9" />
+    
+    <!-- Spreadsheet grid - made more visible -->
+    <rect x="36" y="23" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    <rect x="39.1" y="23" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    <rect x="42.2" y="23" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    
+    <rect x="36" y="25.5" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    <rect x="39.1" y="25.5" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    <rect x="42.2" y="25.5" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    
+    <rect x="36" y="28" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    <rect x="39.1" y="28" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    <rect x="42.2" y="28" width="2.8" height="1.8" rx="0.3" fill="#e8e8e8" stroke="#aaa" stroke-width="0.2" />
+    
+    <!-- CSV text -->
+    <text x="40.5" y="33" font-family="Arial, sans-serif" font-size="3.8" font-weight="bold" fill="#2980b9" text-anchor="middle">CSV</text>
+  </g>
+  
+  <!-- Subtle outer glow -->
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.2" />
+</svg>

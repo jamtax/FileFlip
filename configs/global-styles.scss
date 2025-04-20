@@ -1,0 +1,100 @@
+// Import IBM Plex Sans font
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+// Import Carbon base styles
+@import '@carbon/react/scss/config';
+@import '@carbon/react/scss/themes';
+@import '@carbon/react/scss/theme';
+@import '@carbon/react/scss/breakpoint';
+@import '@carbon/react/scss/reset';
+@import '@carbon/react/scss/components/index';
+
+// Import Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  // Custom variables for FileFlip
+  --jamtax-red: #e74c3c;
+  --jamtax-blue: #2980b9;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background;
+}
+
+// Custom component styles using Tailwind utility classes
+@layer components {
+  .fileflip-card {
+    @apply bg-white rounded-carbon-md shadow-carbon-md p-05 transition-all duration-200;
+    &:hover {
+      @apply shadow-carbon-lg;
+    }
+  }
+
+  .fileflip-button-primary {
+    @apply bg-jamtax-red text-white py-03 px-05 rounded-carbon-md font-semibold transition-colors;
+    &:hover {
+      @apply bg-opacity-90;
+    }
+    &:disabled {
+      @apply bg-carbon-gray-30 cursor-not-allowed;
+    }
+  }
+
+  .fileflip-button-secondary {
+    @apply bg-white border border-carbon-gray-30 text-carbon-gray-100 py-03 px-05 rounded-carbon-md font-semibold transition-colors;
+    &:hover {
+      @apply bg-carbon-gray-10;
+    }
+    &:disabled {
+      @apply text-carbon-gray-40 cursor-not-allowed;
+    }
+  }
+
+  .fileflip-dropzone {
+    @apply border-2 border-dashed border-carbon-gray-30 rounded-carbon-md p-06 flex flex-col items-center justify-center transition-colors;
+    &:hover {
+      @apply border-jamtax-red;
+    }
+    &.active {
+      @apply border-jamtax-red bg-jamtax-red bg-opacity-5;
+    }
+  }
+
+  .fileflip-label {
+    @apply block text-carbon-gray-70 font-medium mb-02;
+  }
+}
+
+// Carbon Components Tweaks
+.#{$prefix}--header {
+  background-color: $background;
+  border-bottom: 1px solid $border-subtle;
+}
+
+.#{$prefix}--tab-content {
+  padding: 1rem 0;
+}
+
+.#{$prefix}--file-browse-btn {
+  max-width: none;
+}
+
+.#{$prefix}--file__selected-file {
+  max-width: 100%;
+}
+
+.#{$prefix}--toast-notification {
+  margin-bottom: 1rem;
+}
+
+.#{$prefix}--data-table {
+  --data-table-border-radius: 0.25rem;
+}
