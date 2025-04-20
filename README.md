@@ -8,7 +8,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 
-![FileFlip Banner](/path/to/banner-image.png)
+![FileFlip Banner]([/path/to/banner-image.png](https://raw.githubusercontent.com/jamtax/FileFlip/dc266a3a1fe109e261488d99a222ab5430476a4d/frontend/public/assets/fileflip-hero-banner.svg))
 
 ## 🚀 Project Overview
 
