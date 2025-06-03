@@ -75,3 +75,13 @@ temp/
 # System files
 .DS_Store
 Thumbs.db
+# Firebase CLI & build artifacts
+.firebase/
+.firebaserc
+
+# GitHub Actions secrets and workflows (keep the workflows, exclude private CI configs if any)
+!.github/
+!.github/workflows/
+
+# Firebase emulator state (if ever used)
+firebase-debug.log
