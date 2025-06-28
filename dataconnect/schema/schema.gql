@@ -1,0 +1,39 @@
+type User @table {
+  displayName: String!
+  createdAt: Timestamp!
+  email: String
+}
+
+type MappingTemplate @table {
+  templateName: String!
+  sourceFormat: String!
+  targetSoftware: String!
+  mappingSchema: String!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  user: User!
+}
+
+type Conversion @table {
+  fileName: String!
+  uploadDate: Timestamp!
+  status: String!
+  sourceFormat: String!
+  outputFormat: String!
+  bankName: String
+  statementStartDate: Date
+  statementEndDate: Date
+  mappingTemplate: MappingTemplate
+  errorDetails: String
+  user: User!
+}
+
+type TransactionRecord @table {
+  transactionDate: Date!
+  description: String!
+  amount: Float!
+  reference: String
+  originalLineNumber: Int
+  status: String
+  conversion: Conversion!
+}

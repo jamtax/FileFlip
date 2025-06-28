@@ -1,12 +1,29 @@
 {
-  "dependencies": {
-    "@carbon/icons-react": "^11.58.0",
-    "@carbon/react": "^1.80.1",
-    "react": "^18.3.1"
-  },
-  "devDependencies": {
-    "@types/react": "^19.1.2",
-    "@vitejs/plugin-react": "^4.4.0",
-    "vite": "^6.3.2"
-  }
+    "name":  "fileflip",
+    "version":  "1.0.0",
+    "dependencies":  {
+                         "@carbon/icons-react":  "^11.58.0",
+                         "@carbon/react":  "^1.80.1",
+                         "@firebasegen/default-connector":  "file:dataconnect-generated/js/default-connector",
+                         "pdfjs-dist":  "^5.3.31",
+                         "react":  "^18.3.1"
+                     },
+    "devDependencies":  {
+                            "@eslint/js":  "^9.30.0",
+                            "@types/react":  "^19.1.2",
+                            "@types/react-pdf":  "^7.0.0",
+                            "@vitejs/plugin-react":  "^4.4.0",
+                            "eslint":  "^9.30.0",
+                            "eslint-plugin-react":  "^7.37.5",
+                            "globals":  "^16.2.0",
+                            "typescript":  "^5.1.6",
+                            "typescript-eslint":  "^8.35.0",
+                            "vite":  "^6.3.2"
+                        },
+    "scripts":  {
+                    "lint":  "eslint .",
+                    "dev":  "vite",
+                    "build":  "vite build",
+                    "preview":  "vite preview"
+                }
 }

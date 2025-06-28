@@ -1,0 +1,38 @@
+{
+  "users": {
+    "user_001": {
+      "name": "Raydo Matthee",
+      "email": "raydo@skunkworks.africa",
+      "role": "admin",
+      "createdAt": "2025-06-28T09:00:00Z"
+    },
+    "user_002": {
+      "name": "Example User",
+      "email": "user@example.com",
+      "role": "standard",
+      "createdAt": "2025-06-28T09:10:00Z"
+    }
+  },
+  "fileMetadata": {
+    "file_001": {
+      "fileName": "example.pdf",
+      "uploadedBy": "user_001",
+      "uploadDate": "2025-06-28T10:00:00Z",
+      "status": "processed"
+    },
+    "file_002": {
+      "fileName": "sample_bank_statement.pdf",
+      "uploadedBy": "user_002",
+      "uploadDate": "2025-06-28T10:30:00Z",
+      "status": "pending"
+    }
+  },
+  "userFiles": {
+    "user_001": {
+      "file_001": true
+    },
+    "user_002": {
+      "file_002": true
+    }
+  }
+}

@@ -1,0 +1,132 @@
+import axios from 'axios';
+
+// Base URL for API requests - change for production
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+
+// Define types for API responses
+export interface TableInfo {
+  page: number;
+  rows: number;
+  columns: number;
+  extraction_method: string;
+  preview: Record<string, any>;
+}
+
+export interface ConversionResponse {
+  job_id: string;
+  message: string;
+}
+
+export interface JobStatusResponse {
+  job_id: string;
+  status: string;
+  output_files?: string[];
+  error_message?: string;
+}
+
+// Create axios instance with base configuration
+const api = axios.create({
+  baseURL: API_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+// API service functions
+const ApiService = {
+  /**
+   * Health check endpoint
+   */
+  healthCheck: async () => {
+    try {
+      const response = await api.get('/health');
+      return response.data;
+    } catch (error) {
+      console.error('Health check failed:', error);
+      throw error;
+    }
+  },
+
+  /**
+   * Detect tables in a PDF file
+   */
+  detectTables: async (file: File): Promise<TableInfo[]> => {
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await axios.post(`${API_URL}/detect-tables`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      return response.data;
+    } catch (error) {
+      console.error('Error detecting tables:', error);
+      throw error;
+    }
+  },
+
+  /**
+   * Convert PDF file to specified format
+   */
+  convertPdf: async (
+    file: File,
+    outputFormat: 'csv' | 'xlsx',
+    ocrEnabled: boolean = false
+  ): Promise<ConversionResponse> => {
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('output_format', outputFormat);
+      formData.append('ocr_enabled', String(ocrEnabled));
+
+      const response = await axios.post(`${API_URL}/convert`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      return response.data;
+    } catch (error) {
+      console.error('Error converting PDF:', error);
+      throw error;
+    }
+  },
+
+  /**
+   * Get job status
+   */
+  getJobStatus: async (jobId: string): Promise<JobStatusResponse> => {
+    try {
+      const response = await api.get(`/job/${jobId}`);
+      return response.data;
+    } catch (error) {
+      console.error(`Error getting job status for ${jobId}:`, error);
+      throw error;
+    }
+  },
+
+  /**
+   * Get download URL for a converted file
+   */
+  getDownloadUrl: (jobId: string, fileIndex: number): string => {
+    return `${API_URL}/download/${jobId}/${fileIndex}`;
+  },
+
+  /**
+   * Delete a job
+   */
+  deleteJob: async (jobId: string): Promise<any> => {
+    try {
+      const response = await api.delete(`/job/${jobId}`);
+      return response.data;
+    } catch (error) {
+      console.error(`Error deleting job ${jobId}:`, error);
+      throw error;
+    }
+  },
+};
+
+export default ApiService;

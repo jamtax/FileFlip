@@ -1,0 +1,24 @@
+// rules_version = '2';
+
+// service cloud.firestore {
+//   match /databases/{database}/documents {
+//     match /{document=**} {
+//       allow read, write: if false;
+//     }
+//   }
+// }
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // This rule allows a user to create, read, and update
+    // their own document in the 'users' collection.
+    // The document ID must match their Firebase Authentication UID.
+    match /users/{userId} {
+      allow read, update: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+      // It's generally good practice to restrict deletes unless explicitly needed.
+      allow delete: if false;
+    }
+    }
+    }

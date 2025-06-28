@@ -1,0 +1,31 @@
+FileFlip/
+├── backend/
+│   ├── app.py                  # FastAPI application
+│   ├── converter/
+│   │   ├── __init__.py
+│   │   ├── pdf_converter.py    # PDF conversion logic
+│   │   └── utils.py            # Helper functions
+│   ├── requirements.txt        # Python dependencies
+│   └── Dockerfile              # Backend Docker configuration
+├── frontend/
+│   ├── public/
+│   │   └── assets/             # Static assets
+│   ├── src/
+│   │   ├── components/         # React components
+│   │   ├── hooks/              # Custom React hooks
+│   │   ├── pages/              # Page components
+│   │   ├── services/           # API services
+│   │   ├── styles/             # Global styles
+│   │   ├── types/              # TypeScript type definitions
+│   │   ├── utils/              # Utility functions
+│   │   ├── App.tsx             # Main application component
+│   │   ├── index.tsx           # Entry point
+│   │   └── config.ts           # Configuration
+│   ├── package.json            # Node dependencies
+│   ├── tsconfig.json           # TypeScript configuration
+│   ├── tailwind.config.js      # Tailwind CSS configuration
+│   └── Dockerfile              # Frontend Docker configuration
+├── docker-compose.yml          # Docker Compose configuration
+├── .gitignore                  # Git ignore file
+├── README.md                   # Project documentation
+└── LICENSE                     # License file

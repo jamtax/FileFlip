@@ -1,0 +1,26 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="cyberpunk-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="50%" stop-color="#16213e" />
+      <stop offset="100%" stop-color="#0f3460" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#cyberpunk-gradient)"/>
+
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="36" font-family="'Orbitron', sans-serif" filter="url(#glow)">
+    Hacker Card
+  </text>
+
+  <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" fill="#ff00cc" font-size="18" font-family="'Courier New', monospace">
+    Tattooed hand holding a custom card over a laptop
+  </text>
+</svg>

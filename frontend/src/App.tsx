@@ -1,19 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Content, Theme } from '@carbon/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { HelmetProvider } from 'react-helmet-async';
 
-// Import components
-import Header from './components/Header';
+// Make sure the file exists at this path, or update the path if needed
+import Layout from './components/Layout';
+import ErrorBoundary from './components/ErrorBoundary';
+
 import HomePage from './pages/HomePage';
 import ConversionPage from './pages/ConversionPage';
 import AboutPage from './pages/AboutPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-// Import global styles
 import './styles/globals.scss';
 
-// Create a react-query client
+// React Query client
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -25,21 +27,23 @@ const queryClient = new QueryClient({
 
 const App: React.FC = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Theme theme="g100">
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
         <Router>
-          <Header />
-          <Content className="min-h-screen bg-carbon-gray-10">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/convert" element={<ConversionPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Content>
+          <ErrorBoundary>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/convert" element={<ConversionPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Layout>
+          </ErrorBoundary>
         </Router>
-      </Theme>
-    </QueryClientProvider>
+        {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 };
 

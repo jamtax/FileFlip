@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FileFlip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts (IBM Carbon design) -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Optional: Global styles if needed (best to import inside index.tsx) -->
+    <!-- <link rel="stylesheet" href="/src/styles.css" /> -->
+
+    <style>
+      /* Inline style for initial layout */
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- React will mount here -->
+    <div id="root"></div>
+
+    <!-- Vite React app entry point -->
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
